@@ -1,0 +1,22 @@
+<h1>Dialog</h1>
+<br>
+<h2>Exemplo</h2>
+<p class="texto">Clicando no botão abaixo o dialog vai abrir, por sobrepõe tudo atrás da página. Clicando
+  fora o
+  dialog vai ser fechado.</p>
+<button class="btn btn-lg btn-outline-primary" (click)="open(mymodal)">Abrir dialog</button>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Modal Title.</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Modal Content
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Save click')">Cancel</button>
+    <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
